@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="248.0" prefWidth="321.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.csc311_loan_calculator.HelloController">
+   <children>
+      <Label fx:id="annual_Interest_Rate_label" layoutX="31.0" layoutY="14.0" text="Annual Interest Rate:" />
+      <Label fx:id="number_of_years_label" layoutX="31.0" layoutY="52.0" text="Number of Years:" />
+      <Label fx:id="loan_amount_label" layoutX="31.0" layoutY="90.0" text="Loan Amount:" />
+      <Label fx:id="monthly_Payment_Label" layoutX="29.0" layoutY="127.0" text="Monthly Payment:" />
+      <Label fx:id="total_Payement_Label" layoutX="29.0" layoutY="165.0" text="Total Payment:" />
+      <Button fx:id="calculate_Button" layoutX="225.0" layoutY="207.0" mnemonicParsing="false" onAction="#calculatePayments" prefHeight="26.0" prefWidth="74.0" text="Calculate" />
+      <TextField fx:id="annualInterestRate" layoutX="150.0" layoutY="10.0" />
+      <TextField fx:id="numberOfYears" layoutX="150.0" layoutY="48.0" />
+      <TextField fx:id="loanAmount" layoutX="150.0" layoutY="86.0" />
+      <TextField fx:id="monthlyPayment" layoutX="150.0" layoutY="123.0" />
+      <TextField fx:id="totalPayment" layoutX="150.0" layoutY="161.0" />
+   </children>
+</AnchorPane>
