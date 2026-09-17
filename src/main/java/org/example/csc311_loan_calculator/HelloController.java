@@ -1,8 +1,14 @@
 package org.example.csc311_loan_calculator;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+
+/*
+Note: i did have to search up how to do a few things, here is what i searched:
+
+#how do i make the user not be able to write in a text field but not grey it out in java:
+https://stackoverflow.com/questions/34387457/trying-to-make-jtextfield-uneditable
+ */
 
 /*
 Note: AI DISCLOSURE: used CHATGPT to help me calculate the monthly interest rate and
@@ -47,10 +53,14 @@ public class HelloController {
         double totalAmountDue = monthlyAmountDue * numberOfMonths;
 
         //sets the amount of the monthly payment in the monthly payment textfield
+        //and dousnt allow the user to change the number
         monthlyPayment.setText(String.valueOf(monthlyAmountDue));
+        monthlyPayment.setEditable(false);
 
         //sets the total payment in the total payment textfield
+        //and dousnt allow the user to change the number
         totalPayment.setText(String.valueOf(totalAmountDue));
+        totalPayment.setEditable(false);
 
         //gets rid of the numbers for annual interest rate
         //and disables the text field
@@ -66,6 +76,8 @@ public class HelloController {
         //and disables the text field
         loanAmount.setText(null);
         loanAmount.setDisable(true);
+
+
 
     }
 }
