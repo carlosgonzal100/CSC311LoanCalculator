@@ -53,14 +53,11 @@ public class HelloController {
         double totalAmountDue = monthlyAmountDue * numberOfMonths;
 
         //sets the amount of the monthly payment in the monthly payment textfield
-        //and dousnt allow the user to change the number
         monthlyPayment.setText(String.valueOf(monthlyAmountDue));
-        monthlyPayment.setEditable(false);
+
 
         //sets the total payment in the total payment textfield
-        //and dousnt allow the user to change the number
         totalPayment.setText(String.valueOf(totalAmountDue));
-        totalPayment.setEditable(false);
 
         //gets rid of the numbers for annual interest rate
         //and disables the text field
@@ -76,8 +73,27 @@ public class HelloController {
         //and disables the text field
         loanAmount.setText(null);
         loanAmount.setDisable(true);
+    }
 
+    @FXML
+    protected void resetCalculator(){
+        //sets annualInterestRate textfield to null and
+        //enables the field after calculating
+        annualInterestRate.setText(null);
+        annualInterestRate.setDisable(false);
 
+        //sets numberOfYears textfield to null and
+        //enables the field after calculating
+        numberOfYears.setText(null);
+        numberOfYears.setDisable(false);
 
+        //sets loanAmount textfield to null and
+        //enables the field after calculating
+        loanAmount.setText(null);
+        loanAmount.setDisable(false);
+
+        //sets monthlyPayment and totalPayment textfields to null and
+        monthlyPayment.setText(null);
+        totalPayment.setText(null);
     }
 }
