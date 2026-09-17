@@ -3,21 +3,6 @@ package org.example.csc311_loan_calculator;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-/*
-Note: i did have to search up how to do a few things, here is what i searched:
-
-#how do i make the user not be able to write in a text field but not grey it out in java:
-https://stackoverflow.com/questions/34387457/trying-to-make-jtextfield-uneditable
- */
-
-/*
-Note: AI DISCLOSURE: used CHATGPT to help me calculate the monthly interest rate and
-the total payment for the calculate payments method here is the prompt i used. It then
-proceeded to show me step by step how to calculate the numbers:
-
-# how to calculate monthly payment from an annual interest rate, number of years and a loan amount
- */
-
 public class HelloController {
 
     /*
