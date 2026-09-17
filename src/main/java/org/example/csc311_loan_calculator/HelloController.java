@@ -72,11 +72,11 @@ public class HelloController {
         double totalAmountDue = monthlyAmountDue * numberOfMonths;
 
         //sets the amount of the monthly payment in the monthly payment textfield
-        monthlyPayment.setText(String.valueOf(monthlyAmountDue));
+        monthlyPayment.setText(String.format("$%.2f", monthlyAmountDue));
 
 
         //sets the total payment in the total payment textfield
-        totalPayment.setText(String.valueOf(totalAmountDue));
+        totalPayment.setText(String.format("$%.2f", totalAmountDue));
 
         //gets rid of the numbers for annual interest rate
         //and disables the text field
