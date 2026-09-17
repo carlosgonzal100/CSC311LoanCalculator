@@ -19,6 +19,33 @@ proceeded to show me step by step how to calculate the numbers:
  */
 
 public class HelloController {
+
+    /*
+    Variables:
+
+    //TextFields:
+    annualInterestRate -- allows the user to enter the amount for the annual interest rate
+
+    numberOfYears -- allows the user to enter the amount for the number of years for the loan
+
+    loanAmount -- allows the user to enter the amount of the loan
+
+    monthlyPayment -- holds the amount of the monthly payment after calculation
+
+    totalPayment -- holds the amount of the total payment after calculation
+
+
+    //variables:
+    Double monthlyInterestRate: holds the calculation for the monthly interest rate
+
+    int numberOfMonths: calculates and holds the number of months based off the number
+    off years the user entered
+
+    double monthlyAmountDue: calcuates and holds the monthly amount
+
+    double totalAmountDue: calculates and holds the totalAmount
+     */
+
     @FXML
     private TextField annualInterestRate;
 
@@ -35,6 +62,13 @@ public class HelloController {
     private TextField totalPayment;
 
 
+    /**
+     * Title: calculatePayments()
+     * calculates the monthly payment and total payment based off the numbers
+     * entered by the user. after calculation the payments are displayed in their
+     * respective spots and the user will not be able to enter new values until
+     * the reset button is pressed.
+     */
     @FXML
     protected void calculatePayments() {
 
@@ -75,6 +109,12 @@ public class HelloController {
         loanAmount.setDisable(true);
     }
 
+    /**
+     * resetCalculator()
+     * resets the state of the calculator by allowing the user to enter
+     * new values for calcuation(loan amount, number of years, annual interest rate)
+     * and sets all values in all text fields to null.
+     */
     @FXML
     protected void resetCalculator(){
         //sets annualInterestRate textfield to null and
